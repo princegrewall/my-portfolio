@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Code, Calendar, Book } from "lucide-react";
@@ -11,23 +10,26 @@ const ProjectsSection = () => {
       image: "contest-tracker",
       description: "A platform to track upcoming competitive programming contests from various platforms like LeetCode, CodeChef, and CodeForces with filters and reminders.",
       technologies: ["React", "Node.js", "MongoDB", "API Integration"],
-      icon: <Calendar className="text-primary" />
+      icon: <Calendar className="text-primary" />,
+      githubUrl: "https://github.com/princegrewall/contest-tracker"
     },
     {
       title: "Student Manager",
       category: "web",
       image: "student-manager",
       description: "A comprehensive system for students to access club activities, track attendance, manage library resources, and access curriculum. Teachers can edit curriculum, and coordinators can manage subclubs and events.",
-      technologies: ["React", "Express", "PostgreSQL", "Authentication"],
-      icon: <Book className="text-primary" />
+      technologies: ["React", "Express", "MongoDB", "Authentication"],
+      icon: <Book className="text-primary" />,
+      githubUrl: "https://github.com/princegrewall/student-manager"
     },
     {
       title: "Codex",
       category: "web",
-      image: "codex",
+      image: "codeX",
       description: "A coding platform where students can solve coding problems, participate in live contests, create and host their own contests, and view real-time leaderboards.",
       technologies: ["React", "Node.js", "MongoDB", "WebSockets", "Judge0 API"],
-      icon: <Code className="text-primary" />
+      icon: <Code className="text-primary" />,
+      githubUrl: "https://github.com/princegrewall/codex"
     }
   ];
 
@@ -60,6 +62,7 @@ interface Project {
   description: string;
   technologies: string[];
   icon: JSX.Element;
+  githubUrl: string;
 }
 
 // Project Card Component
@@ -69,18 +72,16 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       className="glass-card overflow-hidden hover-scale opacity-0 animate-fade-in"
       style={{animationDelay: `${0.6 + index * 0.1}s`}}
     >
-      <div className="h-48 bg-secondary/70 flex items-center justify-center relative overflow-hidden group">
-        <div className="absolute inset-0 flex items-center justify-center">
-          {/* Replace with actual images in a real portfolio */}
+      <div className="h-48 bg-secondary/80 flex items-center justify-center relative overflow-hidden group">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
           <div className="text-4xl text-muted-foreground/50 flex flex-col items-center gap-3">
             <div className="text-5xl">{project.icon}</div>
-            <div>Project Image</div>
           </div>
-        </div>
-        <div className="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <Button variant="outline" className="border-white text-white hover:bg-white/20">
-            View Project
-          </Button>
+          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" className="border-white text-white hover:bg-gray-700">
+              View Project
+            </Button>
+          </a>
         </div>
       </div>
       <CardContent className="p-6">

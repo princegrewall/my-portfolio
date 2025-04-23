@@ -1,11 +1,15 @@
-
+import { Metadata } from "next";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import CodingProfilesSection from "@/components/CodingProfilesSection";
-import Footer from "@/components/Footer";
+import ContactSection from "@/components/ContactSection";
+
+export const metadata: Metadata = {
+  title: "Your Name - Portfolio",
+  description: "Personal portfolio website showcasing my projects and skills",
+};
 
 const Index = () => {
   return (
@@ -13,12 +17,11 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <AboutSection />
         <SkillsSection />
         <ProjectsSection />
         <CodingProfilesSection />
+        <ContactSection />
       </main>
-      <Footer />
     </div>
   );
 };

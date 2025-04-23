@@ -7,49 +7,49 @@ const CodingProfilesSection = () => {
   const profiles = [
     {
       platform: "LeetCode",
-      username: "yourusername",
-      stats: "500+ problems solved",
-      url: "https://leetcode.com/yourusername",
+      username: "coder2324",
+      stats: "Knight (1930+)",
+      url: "https://leetcode.com/coder2324",
       color: "bg-[#F89F1B]/10 border-[#F89F1B]/30",
       textColor: "text-[#F89F1B]"
     },
     {
       platform: "CodeForces",
-      username: "yourusername",
-      stats: "Specialist (1400+)",
-      url: "https://codeforces.com/profile/yourusername",
+      username: "_princegrewal",
+      stats: "Specialist (1500+)",
+      url: "https://codeforces.com/profile/_princegrewal",
       color: "bg-[#3B5998]/10 border-[#3B5998]/30",
       textColor: "text-[#3B5998]"
     },
     {
       platform: "CodeChef",
-      username: "yourusername",
-      stats: "4 Star (1800+)",
-      url: "https://www.codechef.com/users/yourusername",
+      username: "princegrewal",
+      stats: "4 Star (1850+)",
+      url: "https://www.codechef.com/users/princegrewal",
       color: "bg-[#5B4638]/10 border-[#5B4638]/30",
       textColor: "text-[#5B4638]"
     },
     {
       platform: "AtCoder",
-      username: "yourusername",
-      stats: "Green (800+)",
-      url: "https://atcoder.jp/users/yourusername",
-      color: "bg-[#222222]/10 border-[#222222]/30",
+      username: "princegrewal",
+      stats: "Green (900+)",
+      url: "https://atcoder.jp/users/princegrewal",
+      color: "bg-[#5B4638]/10 border-[#222222]/30",
       textColor: "text-[#888888]"
     },
     {
       platform: "GeeksForGeeks",
-      username: "yourusername",
-      stats: "500+ problems solved",
-      url: "https://auth.geeksforgeeks.org/user/yourusername",
+      username: "princegrewal",
+      stats: "4 Star (1850+)",
+      url: "https://auth.geeksforgeeks.org/user/princegrewal",
       color: "bg-[#2F8D46]/10 border-[#2F8D46]/30",
       textColor: "text-[#2F8D46]"
     },
     {
       platform: "GitHub",
-      username: "yourusername",
-      stats: "20+ repositories",
-      url: "https://github.com/yourusername",
+      username: "princegrewall",
+      stats: "10+ repositories",
+      url: "https://github.com/princegrewall",
       color: "bg-[#333333]/10 border-[#333333]/30",
       textColor: "text-[#333333]"
     }

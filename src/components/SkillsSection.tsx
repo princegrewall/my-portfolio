@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -9,16 +8,20 @@ const SkillsSection = () => {
   const technicalSkills = [
     "HTML/CSS",
     "JavaScript",
-    "React",
+    "React.js",
     "Node.js",
     "TypeScript",
     "Tailwind CSS",
+    "Express.js",
+    "MongoDB",
     "Data Structures",
     "Algorithms",
     "Problem Solving",
     "C++",
     "Python",
-    "MongoDB",
+    "MySQL",
+    "Git",
+    "GitHub",
   ];
 
   const softSkills = [
@@ -45,17 +48,15 @@ const SkillsSection = () => {
 
         <div className="max-w-4xl mx-auto">
           <Tabs defaultValue="technical" className="w-full opacity-0 animate-fade-in" style={{animationDelay: "0.4s"}}>
-            <TabsList className="grid w-full grid-cols-2 mb-8">
+            <TabsList className="grid w-full grid-cols-2 mb-8 py-1 " >
               <TabsTrigger 
                 value="technical"
-                className="text-lg py-3 data-[state=active]:bg-primary"
                 onClick={() => setActiveTab("technical")}
               >
                 Technical Skills
               </TabsTrigger>
               <TabsTrigger 
                 value="soft"
-                className="text-lg py-3 data-[state=active]:bg-primary"
                 onClick={() => setActiveTab("soft")}
               >
                 Soft Skills
@@ -69,7 +70,7 @@ const SkillsSection = () => {
                     {technicalSkills.map((skill, index) => (
                       <div 
                         key={index} 
-                        className="opacity-0 animate-fade-in bg-secondary/50 rounded-lg p-3 text-center hover-scale"
+                        className="opacity-0 animate-fade-in bg-secondary/50 rounded-lg p-2 text-center hover-scale"
                         style={{animationDelay: `${0.6 + index * 0.1}s`}}
                       >
                         <span className="font-medium">{skill}</span>

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -23,14 +22,14 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold text-gradient">Portfolio</a>
+        <a href="#" className="text-3xl font-bold text-gradient">Portfolio</a>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          {["Home", "About", "Skills", "Projects"].map((item) => (
+          {["Home", "Skills", "Projects", "Coding Profiles" , "Contact"].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               {item}
@@ -51,10 +50,10 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-lg border-b border-border">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            {["Home", "About", "Skills", "Projects"].map((item) => (
+            {["Home", "Skills", "Projects", "Coding Profiles", "Contact"].map((item) => (
               <a
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
                 className="text-lg font-medium hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
