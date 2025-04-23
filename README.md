@@ -19,7 +19,7 @@ React.js, Tailwind CSS, TypeScript
 
 1. **Clone the repo**
 
-git clone https://github.com/your-username/my-portfolio.git
+git clone https://github.com/princegrewall/my-portfolio.git
 
 cd my-portfolio
 
