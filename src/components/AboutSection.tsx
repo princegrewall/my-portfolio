@@ -1,6 +1,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Github, Mail, Linkedin, Phone } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -11,14 +13,22 @@ const AboutSection = () => {
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left Side - Personal Info */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Left Side - Photo */}
+          <div className="flex justify-center lg:justify-end opacity-0 animate-fade-in" style={{animationDelay: "0.4s"}}>
+            <Avatar className="w-64 h-64 rounded-full border-4 border-primary/20">
+              <AvatarImage src="/placeholder.svg" alt="Profile" />
+              <AvatarFallback>ME</AvatarFallback>
+            </Avatar>
+          </div>
+
+          {/* Right Side - About Text */}
           <Card className="glass-card p-0 opacity-0 animate-fade-in" style={{animationDelay: "0.4s"}}>
             <CardContent className="p-6 md:p-8">
-              <h3 className="text-2xl font-bold mb-6 text-gradient">Personal Info</h3>
+              <h3 className="text-2xl font-bold mb-6 text-gradient">About Me</h3>
               <div className="space-y-5">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I'm a passionate <span className="text-primary font-medium">web developer</span> with experience in creating visually appealing and user-friendly websites. With a strong foundation in modern web technologies, I enjoy bringing ideas to life in the digital world.
+                  I'm a passionate <span className="text-primary font-medium">Competitive Programmer</span> and <span className="text-primary font-medium">Web Developer</span> with experience in creating visually appealing and user-friendly websites. With a strong foundation in modern web technologies, I enjoy bringing ideas to life in the digital world.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   My journey in web development started several years ago when I discovered my passion for coding. Since then, I've been constantly learning and improving my skills to deliver high-quality solutions.
@@ -29,38 +39,28 @@ const AboutSection = () => {
               </div>
             </CardContent>
           </Card>
+        </div>
 
-          {/* Right Side - Personal Details */}
-          <Card className="glass-card p-0 opacity-0 animate-fade-in" style={{animationDelay: "0.6s"}}>
-            <CardContent className="p-6 md:p-8">
-              <h3 className="text-2xl font-bold mb-6 text-gradient">Details</h3>
-              <ul className="space-y-4">
-                {[
-                  { label: "Name", value: "Your Name" },
-                  { label: "Email", value: "youremail@example.com" },
-                  { label: "Location", value: "Your City, Country" },
-                  { label: "Experience", value: "X Years" },
-                  { label: "Degree", value: "Your Degree" },
-                  { label: "Freelance", value: "Available" },
-                ].map((item, index) => (
-                  <li key={index} className="flex border-b border-border pb-3">
-                    <span className="font-medium w-32 text-primary">{item.label}:</span>
-                    <span className="text-foreground/80">{item.value}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8 flex space-x-4">
-                {/* Social Icons - Replace with your own links */}
-                {[1, 2, 3, 4].map((_, index) => (
-                  <a 
-                    key={index}
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary transition-colors"
-                  >
-                    <span className="text-xs">Icon</span>
-                  </a>
-                ))}
-              </div>
+        {/* Contact Details - Bottom Section */}
+        <div className="mt-16 opacity-0 animate-fade-in" style={{animationDelay: "0.6s"}}>
+          <Card className="glass-card">
+            <CardContent className="p-6 flex flex-wrap gap-6 justify-center items-center">
+              <a href="mailto:youremail@example.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <Mail className="w-5 h-5" />
+                <span>youremail@example.com</span>
+              </a>
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <Github className="w-5 h-5" />
+                <span>github.com/yourusername</span>
+              </a>
+              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <Linkedin className="w-5 h-5" />
+                <span>linkedin.com/in/yourusername</span>
+              </a>
+              <a href="tel:+1234567890" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <Phone className="w-5 h-5" />
+                <span>+1 (234) 567-890</span>
+              </a>
             </CardContent>
           </Card>
         </div>
