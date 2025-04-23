@@ -2,27 +2,34 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Progress } from "@/components/ui/progress";
 
 const SkillsSection = () => {
   const [activeTab, setActiveTab] = useState("technical");
 
   const technicalSkills = [
-    { name: "HTML/CSS", percent: 90 },
-    { name: "JavaScript", percent: 85 },
-    { name: "React", percent: 80 },
-    { name: "Node.js", percent: 70 },
-    { name: "TypeScript", percent: 75 },
-    { name: "Tailwind CSS", percent: 85 },
+    "HTML/CSS",
+    "JavaScript",
+    "React",
+    "Node.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Data Structures",
+    "Algorithms",
+    "Problem Solving",
+    "C++",
+    "Python",
+    "MongoDB",
   ];
 
   const softSkills = [
-    { name: "Communication", percent: 90 },
-    { name: "Problem Solving", percent: 85 },
-    { name: "Teamwork", percent: 90 },
-    { name: "Time Management", percent: 80 },
-    { name: "Adaptability", percent: 85 },
-    { name: "Creativity", percent: 75 },
+    "Communication",
+    "Problem Solving",
+    "Teamwork",
+    "Time Management",
+    "Adaptability",
+    "Creativity",
+    "Leadership",
+    "Critical Thinking",
   ];
 
   return (
@@ -32,7 +39,7 @@ const SkillsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-2 font-heading">My Skills</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            I specialize in a range of technologies and possess various soft skills that help me deliver outstanding results.
+            I specialize in competitive programming and web development with a range of technical and soft skills.
           </p>
         </div>
 
@@ -57,40 +64,36 @@ const SkillsSection = () => {
             
             <TabsContent value="technical" className="mt-0 space-y-8">
               <Card className="glass-card overflow-hidden">
-                <CardContent className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {technicalSkills.map((skill, index) => (
-                    <div 
-                      key={index} 
-                      className="opacity-0 animate-fade-in"
-                      style={{animationDelay: `${0.6 + index * 0.1}s`}}
-                    >
-                      <div className="flex justify-between mb-2">
-                        <span className="font-medium">{skill.name}</span>
-                        <span className="text-primary">{skill.percent}%</span>
+                <CardContent className="p-6">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {technicalSkills.map((skill, index) => (
+                      <div 
+                        key={index} 
+                        className="opacity-0 animate-fade-in bg-secondary/50 rounded-lg p-3 text-center hover-scale"
+                        style={{animationDelay: `${0.6 + index * 0.1}s`}}
+                      >
+                        <span className="font-medium">{skill}</span>
                       </div>
-                      <Progress value={skill.percent} className="h-2 bg-secondary [&>div]:bg-primary" />
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             </TabsContent>
             
             <TabsContent value="soft" className="mt-0 space-y-8">
               <Card className="glass-card overflow-hidden">
-                <CardContent className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {softSkills.map((skill, index) => (
-                    <div 
-                      key={index}
-                      className="opacity-0 animate-fade-in"
-                      style={{animationDelay: `${0.6 + index * 0.1}s`}}
-                    >
-                      <div className="flex justify-between mb-2">
-                        <span className="font-medium">{skill.name}</span>
-                        <span className="text-primary">{skill.percent}%</span>
+                <CardContent className="p-6">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {softSkills.map((skill, index) => (
+                      <div 
+                        key={index}
+                        className="opacity-0 animate-fade-in bg-secondary/50 rounded-lg p-3 text-center hover-scale"
+                        style={{animationDelay: `${0.6 + index * 0.1}s`}}
+                      >
+                        <span className="font-medium">{skill}</span>
                       </div>
-                      <Progress value={skill.percent} className="h-2 bg-secondary [&>div]:bg-primary" />
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             </TabsContent>
